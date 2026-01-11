@@ -15,7 +15,6 @@ def test_home_page_load():
 
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=chrome_options)
-    driver = webdriver.Chrome()
     driver.get("https://www.google.com")
     assert "Google" in driver.title
     driver.quit()
